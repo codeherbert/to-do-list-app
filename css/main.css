@@ -1,7 +1,86 @@
+body {
+    background: #2BC0E4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: roboto;
+
+}
+
 #container {
-    border: 2px solid gray;
+    background: #f7f7f7;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    margin: 100px auto;
     width: 360px;
-    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- To-Do List Header ---------- */
+
+h1 {
+    background: #2980b9;
+    color: white;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.fa-plus {
+    float: right;
+}
+
+/* ---------- Input Field ---------- */
+
+input {
+    color: #2980b9;
+    font-size: 18px;
+    background-color: #f7f7f7;
+    width: 100%;
+    padding: 13px 13px 13px 20px;
+    box-sizing: border-box;
+    border: 3px solid rgba(0, 0, 0, 0);
+}
+
+input:focus {
+    background: #fff;
+    border: 3px solid #2980b9;
+    outline: none;
+}
+
+/*---------- Listed Items ---------- */
+
+li {
+    background: #fff;
+    height: 40px;
+    line-height: 40px;
+    color: #666;
+}
+
+li:nth-child(2n) {
+    background: #f7f7f7;
+}
+
+span {
+    background: #e74c3c;
+    display: inline-block;
+    height: 40px;
+    margin-right: 20px;
+    text-align: center;
+    width: 0;
+    color: white;
+    transition: 0.2s linear;
+    opacity: 0;
+
+}
+
+li:hover span {
+    opacity: 1.0;
+    width: 40px;
 }
 
 .completed {
